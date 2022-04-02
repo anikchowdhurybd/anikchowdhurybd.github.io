@@ -1,6 +1,5 @@
-# Welcome !
-
-## This is Anik Chowdhury
+# Hi,  This is Anik Chowdhury
+# Welcome to my github page !
 
 You can use the [editor on GitHub](https://github.com/anikchowdhurybd/anikchowdhurybd.github.io/edit/main/index.md) to maintain and preview the content for your website in Markdown files.
 
