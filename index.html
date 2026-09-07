@@ -1,0 +1,980 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth scroll-pt-20">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>Anik Chowdhury | AI Ecosystem Architect & SaaS Founder</title>
+    <meta name="title" content="Anik Chowdhury | AI Ecosystem Architect & SaaS Founder">
+    <meta name="description"
+        content="Silicon Valley-tier AI Ecosystem Architect, SaaS Founder, and DevOps Engineer. Building autonomous systems, scalable SaaS platforms, and digital economies.">
+    <meta name="keywords"
+        content="AI Engineer, SaaS Founder, DevOps Engineer, Cloud Architect, AI Systems Architect, Anik Chowdhury">
+    <meta name="author" content="Anik Chowdhury">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://anikchowdhury.com/">
+    <meta name="theme-color" content="#050505">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://anikchowdhury.com/">
+    <meta property="og:title" content="Anik Chowdhury | Digital Ecosystem Architect">
+    <meta property="og:description"
+        content="I don't build software. I design autonomous systems that execute, scale, and generate value.">
+    <meta property="og:image" content="https://anikchowdhury.com/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://anikchowdhury.com/">
+    <meta property="twitter:title" content="Anik Chowdhury | AI Ecosystem Architect">
+    <meta property="twitter:description"
+        content="Building autonomous systems, scalable SaaS platforms, and digital economies.">
+    <meta property="twitter:image" content="https://anikchowdhury.com/og-image.jpg">
+
+    <!-- Favicons (Ensure you generate and place these files in your root folder) -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+    <!-- Schema.org Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Person",
+      "name": "Anik Chowdhury",
+      "jobTitle": "AI Ecosystem Architect & SaaS Founder",
+      "url": "https://anikchowdhury.com",
+      "image": "https://anikchowdhury.com/profile-image.jpg",
+      "sameAs": [
+        "https://github.com/anikchowdhurybd",
+        "https://www.linkedin.com/in/anikchowdhurybd/",
+        "https://x.com/anikchowdhuryy"
+      ],
+      "knowsAbout": ["AI Systems", "Cloud Architecture", "DevOps", "SaaS Product Engineering", "Fintech"],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Aquarisol"
+      }
+    }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        base: '#050505',    // Ultra dark Vercel-like background
+                        surface: '#0a0a0a', // Slightly lighter for cards
+                        surface2: '#111111',
+                        accent: '#ffffff',  // Stark white for high contrast
+                        blueglow: '#3b82f6',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS Styles -->
+    <style>
+        body {
+            background-color: #050505;
+            color: #a1a1aa;
+            /* text-zinc-400 */
+            overflow-x: hidden;
+            background-image:
+                radial-gradient(circle at 15% 50%, rgba(59, 130, 246, 0.03) 0%, transparent 25%),
+                radial-gradient(circle at 85% 30%, rgba(255, 255, 255, 0.02) 0%, transparent 25%);
+        }
+
+        /* High-End Glassmorphism / Linear App Style Cards */
+        .glass-card {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .glass-card:hover {
+            border-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.5), 0 0 20px -5px rgba(59, 130, 246, 0.1);
+            transform: translateY(-2px);
+        }
+
+        /* Subtle glowing text gradient */
+        .text-glow {
+            background: linear-gradient(to right, #ffffff, #a1a1aa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Scroll Reveal Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Typewriter Cursor */
+        #typewriter::after {
+            content: '';
+            display: inline-block;
+            width: 2px;
+            height: 1em;
+            background-color: #fff;
+            margin-left: 2px;
+            vertical-align: middle;
+            animation: blink 1s step-start infinite;
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+
+        /* Ambient Background Glow */
+        #glow-blob {
+            position: fixed;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.08) 0%, rgba(5, 5, 5, 0) 60%);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 0;
+            transform: translate(-50%, -50%);
+            transition: width 0.2s, height 0.2s;
+            mix-blend-mode: screen;
+        }
+
+        /* Grid Pattern Background */
+        .grid-bg {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+            mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+        }
+
+        /* Custom Vercel-style Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #050505;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #27272a;
+            border-radius: 5px;
+            border: 2px solid #050505;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #3f3f46;
+        }
+    </style>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0P6XCQD42H"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-0P6XCQD42H');
+    </script>
+</head>
+
+<body class="antialiased selection:bg-white selection:text-black font-sans relative">
+
+    <!-- Interactive Ambient Glow Background -->
+    <div id="glow-blob"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 top-0 transition-all duration-300 backdrop-blur-xl bg-base/50 border-b border-white/5"
+        id="navbar">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#home" class="text-xl font-bold tracking-tighter text-white flex items-center gap-2 group">
+                <svg aria-hidden="true"
+                    class="w-7 h-7 text-white group-hover:text-blue-500 transition-colors duration-300"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <!-- Geometric 'A' -->
+                    <path d="M7 18L12 5l5 13"></path>
+                    <path d="M9 13h6"></path>
+                    <!-- Wrapping 'C' -->
+                    <path d="M20 8a9 9 0 1 0 0 8"></path>
+                </svg>
+                Anik Chowdhury
+            </a>
+
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-zinc-400">
+                <a href="#philosophy" class="hover:text-white transition-colors">Philosophy</a>
+                <a href="#ecosystem" class="hover:text-white transition-colors">Ecosystem</a>
+                <a href="#ventures" class="hover:text-white transition-colors">Ventures</a>
+                <a href="#experience" class="hover:text-white transition-colors">Experience</a>
+            </div>
+
+            <a href="#contact"
+                class="hidden md:inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-black bg-white rounded-md hover:bg-zinc-200 transition-colors">
+                Collaborate
+            </a>
+
+            <!-- Mobile Menu Button (Enhanced Touch Target) -->
+            <button id="mobile-menu-btn"
+                class="md:hidden p-2 -mr-2 text-zinc-400 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white/10 rounded-lg"
+                aria-label="Toggle Menu">
+                <svg aria-hidden="true" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu"
+            class="hidden md:hidden absolute top-full left-0 w-full bg-base/95 backdrop-blur-xl border-b border-white/5 py-6 px-6 flex-col space-y-5 shadow-2xl transition-all duration-300">
+            <a href="#philosophy"
+                class="block text-lg font-medium text-zinc-400 hover:text-white transition-colors">Philosophy</a>
+            <a href="#ecosystem"
+                class="block text-lg font-medium text-zinc-400 hover:text-white transition-colors">Ecosystem</a>
+            <a href="#ventures"
+                class="block text-lg font-medium text-zinc-400 hover:text-white transition-colors">Ventures</a>
+            <a href="#experience"
+                class="block text-lg font-medium text-zinc-400 hover:text-white transition-colors">Experience</a>
+            <a href="#contact"
+                class="block mt-6 px-4 py-3 text-base font-medium text-black bg-white rounded-md hover:bg-zinc-200 transition-colors text-center w-full">Collaborate</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="relative min-h-screen flex items-center pt-24 md:pt-20 overflow-hidden z-10">
+        <div class="absolute inset-0 grid-bg z-0 pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10 w-full">
+            <div class="max-w-4xl reveal active">
+                <div class="flex flex-wrap items-center gap-3 mb-8">
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-[10px] md:text-xs font-mono text-zinc-300 backdrop-blur-md">
+                        <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+                        System Status: Autonomous & Scaling
+                    </div>
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-[10px] md:text-xs font-mono text-zinc-400 backdrop-blur-md">
+                        <svg aria-hidden="true" class="w-3 h-3 text-zinc-400" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                            </path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                        Khulna, Bangladesh
+                    </div>
+                </div>
+
+                <h1
+                    class="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold text-white tracking-tighter leading-tight mb-6">
+                    Anik Chowdhury.<br>
+                    <span class="text-zinc-500">Ecosystem Architect</span>
+                </h1>
+
+                <h2 class="text-xl sm:text-2xl md:text-3xl font-medium text-zinc-300 mb-8 h-12 md:h-10">
+                    Architecting <span id="typewriter" class="text-white"></span>
+                </h2>
+
+                <p class="text-base md:text-xl text-zinc-400 mb-10 max-w-2xl leading-relaxed">
+                    I design and deploy autonomous digital economies. Bridging the gap between AI orchestration, cloud
+                    infrastructure, and scalable SaaS platforms to generate sustainable economic value.
+                </p>
+
+                <div class="flex flex-col sm:flex-row flex-wrap gap-4 items-stretch sm:items-center">
+                    <a href="#ecosystem"
+                        class="px-6 py-3.5 rounded-md bg-white text-black font-semibold hover:bg-zinc-200 transition-all flex items-center justify-center gap-2 text-center">
+                        View Ecosystem Architecture
+                        <svg aria-hidden="true" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                        </svg>
+                    </a>
+                    <a href="#contact"
+                        class="px-6 py-3.5 rounded-md border border-white/10 text-white font-medium hover:bg-white/5 transition-all text-center">
+                        Strategic Partnerships
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Metrics / Social Proof Strip -->
+    <section class="border-y border-white/5 bg-white/[0.01] relative z-10">
+        <div class="max-w-7xl mx-auto px-6 py-12">
+            <div
+                class="grid grid-cols-2 md:grid-cols-4 gap-y-8 gap-x-4 md:gap-8 divide-none md:divide-x divide-white/5">
+                <div class="px-2 md:px-4 text-center reveal">
+                    <div class="text-3xl md:text-4xl font-bold text-white mb-1">300+</div>
+                    <div class="text-[10px] md:text-sm font-mono text-zinc-500 uppercase tracking-wider">Tools Deployed
+                    </div>
+                </div>
+                <div class="px-2 md:px-4 text-center reveal border-l border-white/5 md:border-none"
+                    style="transition-delay: 100ms;">
+                    <div class="text-3xl md:text-4xl font-bold text-white mb-1">100%</div>
+                    <div class="text-[10px] md:text-sm font-mono text-zinc-500 uppercase tracking-wider">Cloud Native
+                    </div>
+                </div>
+                <div class="px-2 md:px-4 text-center reveal border-t border-white/5 md:border-none pt-8 md:pt-0"
+                    style="transition-delay: 200ms;">
+                    <div class="text-3xl md:text-4xl font-bold text-white mb-1">Multi</div>
+                    <div class="text-[10px] md:text-sm font-mono text-zinc-500 uppercase tracking-wider">Platform SaaS
+                    </div>
+                </div>
+                <div class="px-2 md:px-4 text-center reveal border-t border-l border-white/5 md:border-none pt-8 md:pt-0"
+                    style="transition-delay: 300ms;">
+                    <div class="text-3xl md:text-4xl font-bold text-white mb-1">AI+</div>
+                    <div class="text-[10px] md:text-sm font-mono text-zinc-500 uppercase tracking-wider">Fintech Systems
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About / Philosophy Section -->
+    <section id="philosophy" class="py-20 md:py-32 relative z-10">
+        <div class="max-w-4xl mx-auto px-6 text-center reveal">
+            <h2 class="text-xs font-mono text-blue-500 mb-4 uppercase tracking-widest">Operating Philosophy</h2>
+            <h3 class="text-3xl md:text-5xl font-bold text-white leading-tight mb-8">
+                "I don’t just build software.<br>
+                <span class="text-zinc-500">I design autonomous systems that execute, scale, and generate real economic
+                    value."</span>
+            </h3>
+            <p class="text-base md:text-lg text-zinc-400 leading-relaxed max-w-3xl mx-auto">
+                My engineering approach is driven by business outcomes. I view code not as a craft, but as an execution
+                engine. By combining AI agents, event-driven cloud architecture, and financial technologies, I architect
+                digital empires that require minimal human intervention to scale.
+            </p>
+        </div>
+    </section>
+
+    <!-- Ecosystem Architecture (Bento Box Grid) -->
+    <section id="ecosystem" class="py-20 md:py-24 relative z-10 bg-surface2/30 border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-16 reveal">
+                <h2 class="text-xs font-mono text-blue-500 mb-2 uppercase tracking-widest">System Blueprint</h2>
+                <h3 class="text-3xl font-bold text-white">Ecosystem Architecture Layers</h3>
+                <p class="mt-4 text-zinc-400 max-w-2xl">The foundational pillars I use to construct scalable, autonomous
+                    digital businesses.</p>
+            </div>
+
+            <!-- Bento Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- AI Systems -->
+                <div class="glass-card p-8 rounded-2xl md:col-span-2 reveal group">
+                    <div
+                        class="w-12 h-12 rounded-lg bg-white/5 flex items-center justify-center mb-6 border border-white/10 group-hover:border-white/30 transition-colors">
+                        <svg aria-hidden="true" class="w-6 h-6 text-white" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h4 class="text-2xl font-bold text-white mb-3">AI Systems & Agents</h4>
+                    <p class="text-zinc-400 mb-6">Designing autonomous execution engines. Utilizing LLMs, RAG
+                        architectures, and agentic workflows to replace manual operational bottlenecks with intelligent,
+                        self-healing systems.</p>
+                </div>
+
+                <!-- Automation -->
+                <div class="glass-card p-8 rounded-2xl reveal group" style="transition-delay: 100ms;">
+                    <div
+                        class="w-12 h-12 rounded-lg bg-white/5 flex items-center justify-center mb-6 border border-white/10 group-hover:border-white/30 transition-colors">
+                        <svg aria-hidden="true" class="w-6 h-6 text-white" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15">
+                            </path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3">Automation</h4>
+                    <p class="text-zinc-400 text-sm">Event-driven workflows and serverless functions ensuring
+                        zero-downtime execution across distributed networks.</p>
+                </div>
+
+                <!-- Cloud -->
+                <div class="glass-card p-8 rounded-2xl reveal group" style="transition-delay: 200ms;">
+                    <div
+                        class="w-12 h-12 rounded-lg bg-white/5 flex items-center justify-center mb-6 border border-white/10 group-hover:border-white/30 transition-colors">
+                        <svg aria-hidden="true" class="w-6 h-6 text-white" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3">Cloud Infra</h4>
+                    <p class="text-zinc-400 text-sm">Cloudflare + GCP hybrid architectures. Edge computing for
+                        latency-critical applications and Kubernetes for heavy lifting.</p>
+                </div>
+
+                <!-- Data -->
+                <div class="glass-card p-8 rounded-2xl reveal group" style="transition-delay: 300ms;">
+                    <div
+                        class="w-12 h-12 rounded-lg bg-white/5 flex items-center justify-center mb-6 border border-white/10 group-hover:border-white/30 transition-colors">
+                        <svg aria-hidden="true" class="w-6 h-6 text-white" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4">
+                            </path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3">Data Pipelines</h4>
+                    <p class="text-zinc-400 text-sm">Scalable distributed pipelines managing unstructured data lakes,
+                        preparing context for AI engines in real-time.</p>
+                </div>
+
+                <!-- Economy -->
+                <div class="glass-card p-8 rounded-2xl md:col-span-1 reveal group" style="transition-delay: 400ms;">
+                    <div
+                        class="w-12 h-12 rounded-lg bg-white/5 flex items-center justify-center mb-6 border border-white/10 group-hover:border-white/30 transition-colors">
+                        <svg aria-hidden="true" class="w-6 h-6 text-white" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3">Digital Economy</h4>
+                    <p class="text-zinc-400 text-sm">SaaS monetization models and tokenized digital systems bridging the
+                        gap between utility and revenue generation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Ventures -->
+    <section id="ventures" class="py-20 md:py-32 relative z-10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 reveal">
+                <div>
+                    <h2 class="text-xs font-mono text-blue-500 mb-2 uppercase tracking-widest">Active Operations</h2>
+                    <h3 class="text-3xl md:text-4xl font-bold text-white">Core Ventures</h3>
+                </div>
+                <a href="https://github.com/anikchowdhurybd" target="_blank" rel="noopener noreferrer"
+                    class="mt-4 md:mt-0 text-sm font-medium text-white hover:text-zinc-400 transition-colors inline-flex items-center gap-2">
+                    View GitHub Repository <svg aria-hidden="true" class="w-4 h-4" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Venture 1 -->
+                <div class="glass-card p-8 rounded-2xl reveal group relative">
+                    <div class="flex justify-between items-start mb-6">
+                        <h4 class="text-2xl font-bold text-white group-hover:text-blue-500 transition-colors">
+                            <a href="https://smallseoengine.com" target="_blank" rel="noopener noreferrer"
+                                class="before:absolute before:inset-0">
+                                Small SEO Engine <svg aria-hidden="true"
+                                    class="w-5 h-5 inline-block opacity-0 group-hover:opacity-100 transition-opacity -mt-1"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14">
+                                    </path>
+                                </svg>
+                            </a>
+                        </h4>
+                        <span
+                            class="px-3 py-1 text-xs font-mono bg-white/5 border border-white/10 rounded-full text-zinc-300 relative z-10">Live
+                            SaaS</span>
+                    </div>
+                    <p class="text-zinc-300 font-medium mb-2">API-first SEO SaaS Platform</p>
+                    <p class="text-zinc-500 text-sm mb-6 leading-relaxed">
+                        A massive SaaS system deploying over 300+ individual tools. Built with an API-first approach,
+                        allowing seamless integration for enterprise clients to automate their search engine
+                        optimization operations.
+                    </p>
+                    <div class="pt-6 border-t border-white/5">
+                        <p class="text-xs font-mono text-zinc-400 uppercase tracking-widest mb-3">Architecture Insight
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="text-xs bg-white/5 px-2 py-1 rounded text-zinc-300 border border-white/5">Microservices</span>
+                            <span
+                                class="text-xs bg-white/5 px-2 py-1 rounded text-zinc-300 border border-white/5">Distributed
+                                Caching</span>
+                            <span
+                                class="text-xs bg-white/5 px-2 py-1 rounded text-zinc-300 border border-white/5">High-Availability
+                                API</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Venture 2 -->
+                <div class="glass-card p-8 rounded-2xl reveal group" style="transition-delay: 100ms;">
+                    <div class="flex justify-between items-start mb-6">
+                        <h4 class="text-2xl font-bold text-white">Sundarban AI</h4>
+                        <span
+                            class="px-3 py-1 text-xs font-mono bg-white/5 border border-white/10 rounded-full text-zinc-300">Ecosystem</span>
+                    </div>
+                    <p class="text-zinc-300 font-medium mb-2">AI-Driven Social Ecosystem</p>
+                    <p class="text-zinc-500 text-sm mb-6 leading-relaxed">
+                        A next-generation social platform powered entirely by AI systems. Implements autonomous content
+                        curation, deep-learning based user matching, and real-time community safety protocols.
+                    </p>
+                    <div class="pt-6 border-t border-white/5">
+                        <p class="text-xs font-mono text-zinc-400 uppercase tracking-widest mb-3">Architecture Insight
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="text-xs bg-white/5 px-2 py-1 rounded text-zinc-300 border border-white/5">Real-time
+                                Graph DB</span>
+                            <span class="text-xs bg-white/5 px-2 py-1 rounded text-zinc-300 border border-white/5">Edge
+                                AI Inferencing</span>
+                            <span
+                                class="text-xs bg-white/5 px-2 py-1 rounded text-zinc-300 border border-white/5">Event-driven
+                                Scaling</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Venture 3 -->
+                <div class="glass-card p-8 rounded-2xl reveal group">
+                    <div class="flex justify-between items-start mb-6">
+                        <h4 class="text-2xl font-bold text-white">Aquarisol</h4>
+                        <span
+                            class="px-3 py-1 text-xs font-mono bg-white/5 border border-white/10 rounded-full text-zinc-300">Platform</span>
+                    </div>
+                    <p class="text-zinc-300 font-medium mb-2">Autonomous AI Assistant Platform</p>
+                    <p class="text-zinc-500 text-sm mb-6 leading-relaxed">
+                        A robust platform enabling the deployment of specialized AI agents for B2B applications. It
+                        handles context-window management, persistent memory architectures, and secure enterprise data
+                        integration.
+                    </p>
+                    <div class="pt-6 border-t border-white/5">
+                        <p class="text-xs font-mono text-zinc-400 uppercase tracking-widest mb-3">Architecture Insight
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="text-xs bg-white/5 px-2 py-1 rounded text-zinc-300 border border-white/5">Vector
+                                Databases</span>
+                            <span class="text-xs bg-white/5 px-2 py-1 rounded text-zinc-300 border border-white/5">LLM
+                                Orchestration</span>
+                            <span
+                                class="text-xs bg-white/5 px-2 py-1 rounded text-zinc-300 border border-white/5">Zero-Trust
+                                Security</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Venture 4 -->
+                <div class="glass-card p-8 rounded-2xl reveal group" style="transition-delay: 100ms;">
+                    <div class="flex justify-between items-start mb-6">
+                        <h4 class="text-2xl font-bold text-white">DadyCoin</h4>
+                        <span
+                            class="px-3 py-1 text-xs font-mono bg-white/5 border border-white/10 rounded-full text-zinc-300">FinTech</span>
+                    </div>
+                    <p class="text-zinc-300 font-medium mb-2">Digital Economy & Fintech System</p>
+                    <p class="text-zinc-500 text-sm mb-6 leading-relaxed">
+                        A foundational fintech infrastructure designed to tokenize digital assets and manage
+                        micro-transactions at scale. Provides the economic engine for multi-platform SaaS environments.
+                    </p>
+                    <div class="pt-6 border-t border-white/5">
+                        <p class="text-xs font-mono text-zinc-400 uppercase tracking-widest mb-3">Architecture Insight
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="text-xs bg-white/5 px-2 py-1 rounded text-zinc-300 border border-white/5">High-throughput
+                                Ledger</span>
+                            <span class="text-xs bg-white/5 px-2 py-1 rounded text-zinc-300 border border-white/5">Smart
+                                Contracts</span>
+                            <span
+                                class="text-xs bg-white/5 px-2 py-1 rounded text-zinc-300 border border-white/5">Cryptographic
+                                Security</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Venture 5: DadyPay (Spans full width for emphasis) -->
+                <div class="glass-card p-8 rounded-2xl reveal group md:col-span-2">
+                    <div class="flex justify-between items-start mb-6">
+                        <h4 class="text-2xl font-bold text-white">DadyPay</h4>
+                        <span
+                            class="px-3 py-1 text-xs font-mono bg-white/5 border border-white/10 rounded-full text-zinc-300">Payment
+                            Gateway</span>
+                    </div>
+                    <p class="text-zinc-300 font-medium mb-2">High-Velocity Transaction & Settlement Layer</p>
+                    <p class="text-zinc-500 text-sm mb-6 leading-relaxed max-w-3xl">
+                        A high-performance payment routing system built to process fiat and digital assets seamlessly.
+                        It serves as the bridge between traditional finance and decentralized web economies, featuring
+                        real-time fraud detection AI and sub-second settlement times.
+                    </p>
+                    <div class="pt-6 border-t border-white/5">
+                        <p class="text-xs font-mono text-zinc-400 uppercase tracking-widest mb-3">Architecture Insight
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="text-xs bg-white/5 px-2 py-1 rounded text-zinc-300 border border-white/5">Payment
+                                Switch API</span>
+                            <span
+                                class="text-xs bg-white/5 px-2 py-1 rounded text-zinc-300 border border-white/5">Event-driven
+                                Webhooks</span>
+                            <span class="text-xs bg-white/5 px-2 py-1 rounded text-zinc-300 border border-white/5">Fraud
+                                Detection ML</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enterprise Tech Stack / Infrastructure -->
+    <section id="stack" class="py-20 relative z-10 border-t border-white/5 bg-white/[0.01]">
+        <div class="max-w-5xl mx-auto px-6 text-center reveal">
+            <h2 class="text-xs font-mono text-blue-500 mb-8 uppercase tracking-widest">Core Execution Engine</h2>
+            <div class="flex flex-wrap justify-center gap-3 md:gap-4">
+                <span
+                    class="px-5 py-2.5 rounded-full bg-white/5 border border-white/10 text-sm font-mono text-zinc-400 hover:border-blue-500/50 hover:text-white hover:bg-white/10 transition-all cursor-default shadow-sm">Kubernetes
+                    & Docker</span>
+                <span
+                    class="px-5 py-2.5 rounded-full bg-white/5 border border-white/10 text-sm font-mono text-zinc-400 hover:border-blue-500/50 hover:text-white hover:bg-white/10 transition-all cursor-default shadow-sm">Cloudflare
+                    Edge Networks</span>
+                <span
+                    class="px-5 py-2.5 rounded-full bg-white/5 border border-white/10 text-sm font-mono text-zinc-400 hover:border-blue-500/50 hover:text-white hover:bg-white/10 transition-all cursor-default shadow-sm">GCP
+                    & AWS Cloud</span>
+                <span
+                    class="px-5 py-2.5 rounded-full bg-white/5 border border-white/10 text-sm font-mono text-zinc-400 hover:border-blue-500/50 hover:text-white hover:bg-white/10 transition-all cursor-default shadow-sm">Node.js
+                    & Microservices</span>
+                <span
+                    class="px-5 py-2.5 rounded-full bg-white/5 border border-white/10 text-sm font-mono text-zinc-400 hover:border-blue-500/50 hover:text-white hover:bg-white/10 transition-all cursor-default shadow-sm">Python
+                    (AI Agents)</span>
+                <span
+                    class="px-5 py-2.5 rounded-full bg-white/5 border border-white/10 text-sm font-mono text-zinc-400 hover:border-blue-500/50 hover:text-white hover:bg-white/10 transition-all cursor-default shadow-sm">TypeScript
+                    & React</span>
+                <span
+                    class="px-5 py-2.5 rounded-full bg-white/5 border border-white/10 text-sm font-mono text-zinc-400 hover:border-blue-500/50 hover:text-white hover:bg-white/10 transition-all cursor-default shadow-sm">PostgreSQL
+                    & Redis</span>
+                <span
+                    class="px-5 py-2.5 rounded-full bg-white/5 border border-white/10 text-sm font-mono text-zinc-400 hover:border-blue-500/50 hover:text-white hover:bg-white/10 transition-all cursor-default shadow-sm">Vector
+                    DBs & RAG</span>
+                <span
+                    class="px-5 py-2.5 rounded-full bg-white/5 border border-white/10 text-sm font-mono text-zinc-400 hover:border-blue-500/50 hover:text-white hover:bg-white/10 transition-all cursor-default shadow-sm">Terraform
+                    (IaC)</span>
+                <span
+                    class="px-5 py-2.5 rounded-full bg-white/5 border border-white/10 text-sm font-mono text-zinc-400 hover:border-blue-500/50 hover:text-white hover:bg-white/10 transition-all cursor-default shadow-sm">Kafka
+                    & Event Queues</span>
+                <span
+                    class="px-5 py-2.5 rounded-full bg-white/5 border border-white/10 text-sm font-mono text-zinc-400 hover:border-blue-500/50 hover:text-white hover:bg-white/10 transition-all cursor-default shadow-sm">Web3
+                    & Smart Contracts</span>
+                <span
+                    class="px-5 py-2.5 rounded-full bg-white/5 border border-white/10 text-sm font-mono text-zinc-400 hover:border-blue-500/50 hover:text-white hover:bg-white/10 transition-all cursor-default shadow-sm">Payment
+                    Switch APIs</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience / System Scaling -->
+    <section id="experience" class="py-20 md:py-24 relative z-10 border-t border-white/5 bg-surface2/20">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="mb-16 text-center reveal">
+                <h2 class="text-xs font-mono text-blue-500 mb-2 uppercase tracking-widest">Track Record</h2>
+                <h3 class="text-3xl font-bold text-white">System Scaling & Leadership</h3>
+            </div>
+
+            <div class="space-y-8">
+                <!-- Role 1 -->
+                <div class="glass-card p-8 rounded-2xl border border-white/5 reveal">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                        <div>
+                            <h4 class="text-xl font-bold text-white">Founder & CTO</h4>
+                            <div class="text-blue-500 font-medium mt-1">Multiple SaaS, AI & FinTech Ecosystems</div>
+                        </div>
+                        <span
+                            class="text-sm font-mono text-zinc-500 mt-2 md:mt-0 bg-white/5 px-3 py-1 rounded-full border border-white/5">Present</span>
+                    </div>
+                    <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+                        Leading the architectural vision and technical strategy across multiple high-growth SaaS
+                        platforms. Focused on driving business value through infrastructure automation, AI integration,
+                        and scalable system design.
+                    </p>
+                    <ul class="space-y-2">
+                        <li class="flex items-start text-sm text-zinc-500">
+                            <svg aria-hidden="true" class="w-4 h-4 text-zinc-300 mt-1 mr-3 shrink-0" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            Architected and deployed over 300+ micro-tools resulting in massive SEO footprint expansion.
+                        </li>
+                        <li class="flex items-start text-sm text-zinc-500">
+                            <svg aria-hidden="true" class="w-4 h-4 text-zinc-300 mt-1 mr-3 shrink-0" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            Engineered zero-downtime CI/CD pipelines, accelerating feature velocity by 300%.
+                        </li>
+                        <li class="flex items-start text-sm text-zinc-500">
+                            <svg aria-hidden="true" class="w-4 h-4 text-zinc-300 mt-1 mr-3 shrink-0" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            Integrated autonomous AI agents into core product loops, reducing operational overhead.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Role 2 -->
+                <div class="glass-card p-8 rounded-2xl border border-white/5 reveal">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                        <div>
+                            <h4 class="text-xl font-bold text-white">DevOps & Cloud Systems Engineer</h4>
+                            <div class="text-zinc-300 font-medium mt-1">Enterprise Infrastructure Architecture</div>
+                        </div>
+                        <span
+                            class="text-sm font-mono text-zinc-500 mt-2 md:mt-0 bg-white/5 px-3 py-1 rounded-full border border-white/5">Previous</span>
+                    </div>
+                    <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+                        Designed highly available, fault-tolerant infrastructure bridging Cloudflare edge networks with
+                        GCP backend systems. Managed complex data pipelines and security protocols.
+                    </p>
+                    <ul class="space-y-2">
+                        <li class="flex items-start text-sm text-zinc-500">
+                            <svg aria-hidden="true" class="w-4 h-4 text-zinc-300 mt-1 mr-3 shrink-0" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            Migrated monolithic legacy systems to event-driven serverless architectures.
+                        </li>
+                        <li class="flex items-start text-sm text-zinc-500">
+                            <svg aria-hidden="true" class="w-4 h-4 text-zinc-300 mt-1 mr-3 shrink-0" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            Implemented hybrid Cloudflare/GCP strategies, reducing global latency by 40%.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / Business Section -->
+    <section id="contact" class="py-20 md:py-32 border-t border-white/5 relative z-10 overflow-hidden">
+        <!-- Background subtle glow specifically for contact -->
+        <div class="absolute inset-0 bg-gradient-to-t from-blue-500/5 to-transparent z-0 pointer-events-none"></div>
+
+        <div class="max-w-4xl mx-auto px-6 text-center reveal relative z-10">
+            <h2 class="text-xs font-mono text-blue-500 mb-4 uppercase tracking-widest">Execute Phase</h2>
+            <h3 class="text-4xl md:text-6xl font-bold text-white mb-6">Initiate Collaboration</h3>
+            <p class="text-zinc-400 mb-10 max-w-2xl mx-auto text-lg leading-relaxed">
+                I am currently open for strategic partnerships, high-level technical advising, and architecting AI
+                infrastructure projects that demand extreme scale.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="mailto:hello@anikchowdhury.net"
+                    class="w-full sm:w-auto px-8 py-4 rounded-md bg-white text-black font-bold text-lg hover:bg-zinc-200 transition-all shadow-[0_0_20px_rgba(255,255,255,0.1)]">
+                    Discuss Architecture
+                </a>
+                <a href="https://github.com/anikchowdhurybd" target="_blank" rel="noopener noreferrer"
+                    class="w-full sm:w-auto px-8 py-4 rounded-md border border-white/10 text-white font-medium hover:bg-white/5 transition-all flex items-center justify-center gap-2">
+                    <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd"
+                            d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                    GitHub Profile
+                </a>
+            </div>
+
+            <div class="mt-8 text-zinc-500 text-sm font-mono">
+                Direct: <a href="mailto:hello@anikchowdhury.net"
+                    class="text-zinc-300 hover:text-white transition-colors">hello@anikchowdhury.net</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-white/5 text-center relative z-10 bg-base">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-2 group">
+                <svg aria-hidden="true"
+                    class="w-6 h-6 text-white group-hover:text-blue-500 transition-colors duration-300"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <!-- Geometric 'A' -->
+                    <path d="M7 18L12 5l5 13"></path>
+                    <path d="M9 13h6"></path>
+                    <!-- Wrapping 'C' -->
+                    <path d="M20 8a9 9 0 1 0 0 8"></path>
+                </svg>
+                <span class="text-white font-bold tracking-tight">Anik Chowdhury</span>
+            </div>
+
+            <p class="text-zinc-600 text-sm font-mono">
+                &copy; <span id="year"></span> Anik Chowdhury. All rights reserved.
+            </p>
+
+            <div class="flex items-center space-x-6 text-zinc-500">
+                <a href="https://github.com/anikchowdhurybd" target="_blank" rel="noopener noreferrer"
+                    class="hover:text-white transition-colors" aria-label="GitHub">
+                    <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd"
+                            d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/anikchowdhurybd/" target="_blank" rel="noopener noreferrer"
+                    class="hover:text-white transition-colors" aria-label="LinkedIn">
+                    <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd"
+                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </a>
+                <a href="https://x.com/anikchowdhuryy" target="_blank" rel="noopener noreferrer"
+                    class="hover:text-white transition-colors" aria-label="X (Twitter)">
+                    <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // Set Current Year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Typewriter Effect (Updated with Founder-level phrases)
+        const typeTarget = document.getElementById('typewriter');
+        const phrases = ["Autonomous Systems", "Scalable SaaS Platforms", "Digital Economies"];
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        function type() {
+            if (!typeTarget) return;
+            const currentPhrase = phrases[phraseIndex];
+
+            if (isDeleting) {
+                typeTarget.textContent = currentPhrase.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typeTarget.textContent = currentPhrase.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            let typeSpeed = isDeleting ? 40 : 80;
+
+            if (!isDeleting && charIndex === currentPhrase.length) {
+                typeSpeed = 2500; // Pause at end of phrase
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+                typeSpeed = 500; // Pause before new phrase
+            }
+
+            setTimeout(type, typeSpeed);
+        }
+
+        // Start typing after initial load
+        setTimeout(type, 1000);
+
+        // Scroll Reveal Animations
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // Mobile Menu Toggle logic
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                mobileMenu.classList.toggle('flex');
+            });
+
+            // Close mobile menu when a link is clicked
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenu.classList.remove('flex');
+                });
+            });
+        }
+
+        // Navbar blur and border effect on scroll
+        const navbar = document.getElementById('navbar');
+        if (navbar) {
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 20) {
+                    navbar.classList.add('bg-base/80', 'backdrop-blur-xl');
+                    navbar.classList.remove('bg-base/50');
+                } else {
+                    navbar.classList.remove('bg-base/80', 'backdrop-blur-xl');
+                    navbar.classList.add('bg-base/50');
+                }
+            });
+        }
+
+        // Glow Blob Follower (Extremely subtle, screen blend mode)
+        const blob = document.getElementById('glow-blob');
+        if (blob && window.matchMedia("(pointer: fine)").matches) {
+            document.body.onpointermove = event => {
+                const { clientX, clientY } = event;
+                blob.animate({
+                    left: `${clientX}px`,
+                    top: `${clientY}px`
+                }, { duration: 4000, fill: "forwards" }); // Slower, smoother trailing effect
+            };
+        }
+    </script>
+</body>
+
+</html>
